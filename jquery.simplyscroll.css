@@ -1,0 +1,143 @@
+/*
+ * simplyScroll 2 - a scroll-tastic jQuery plugin
+ *
+ * http://logicbox.net/jquery/simplyscroll
+ * http://plugins.jquery.com/project/simplyScroll
+ *
+ * Copyright (c) 2009-2011 Will Kelly - http://logicbox.net
+ *
+ * Dual licensed under the MIT (MIT-LICENSE.txt)
+ * and GPL (GPL-LICENSE.txt) licenses.
+ *
+ * Last revised: 31/01/2012
+ *
+ */
+
+/* Default/Master classes
+
+Example markup format (for horizontal scroller)
+Note all DIVs are generated and should not be hard-coded
+
+<div class="your-custom-class simply-scroll-container">
+	<div class="simply-scroll-btn simply-scroll-btn-left"></div>
+	<div class="simply-scroll-btn simply-scroll-btn-right"></div>
+	<div class="simply-scroll-clip">
+		<ul class="simply-scroll-list">
+			<li>...</li>
+			...
+		</ul>
+	</div>
+</div>
+
+
+*/
+
+.simply-scroll-container { /* Container DIV - automatically generated */
+	position: relative;
+}
+
+	.simply-scroll-clip { /* Clip DIV - automatically generated */
+		position: relative;
+		overflow: hidden;
+	}
+
+	.simply-scroll-list { /* UL/OL/DIV - the element that simplyScroll is inited on */
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+		.simply-scroll-list li {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		.simply-scroll-list li img {
+			border: none;
+			display: block;
+		}
+
+	.simply-scroll-btn {
+		position: absolute;
+		width: 32px;
+		height: 32px;
+		z-index:3;
+		cursor: pointer;
+	}
+
+	.simply-scroll-btn-left {
+		left: 6px;
+		bottom: 6px;
+		background-position: 0 -44px;
+	}
+
+/* Custom class modifications - override classees
+
+.simply-scroll is default
+
+*/
+
+.simply-scroll { /* Customisable base class for style override DIV */
+	width: 576px;
+	height: 200px;
+	margin-bottom: 1em;
+}
+
+	.simply-scroll .simply-scroll-clip {
+		width: 576px;
+		height: 200px;
+	}
+
+		.simply-scroll .simply-scroll-list {}
+
+		.simply-scroll .simply-scroll-list li {
+			float: left;
+			width: 290px;
+			height: 200px;
+		}
+
+
+
+
+/* Vertical scroller example */
+
+.vert { /* wider than clip to position buttons to side */
+	width: 300px;
+	height: 220px;
+	margin-bottom: 1.5em;
+}
+
+	.vert .simply-scroll-clip {
+		width: 290px;
+		height: 200px;
+		border: 1px solid #000;
+    padding: 0px 0px 0px 7px;
+	}
+
+		.vert .simply-scroll-list {}
+
+		.vert .simply-scroll-list li {
+			width: 290px;
+			height: 40px;
+		}
+		.vert .simply-scroll-list li img {}
+
+	.vert .simply-scroll-btn {}
+
+	.vert .simply-scroll-btn-up { /* modified btn pos */
+		right: 0;
+		left: 45%;
+	}
+	.vert .simply-scroll-btn-up.disabled {}
+	.vert .simply-scroll-btn-up:hover {}
+
+	.vert .simply-scroll-btn-down { /* modified btn pos */
+	left: 45%;
+	bottom: 5px;
+	}
+	.vert .simply-scroll-btn-down.disabled {}
+	.vert .simply-scroll-btn-down:hover {}
+
+	/* NOTE left-right classes wouldn't be needed on vertical scroller */

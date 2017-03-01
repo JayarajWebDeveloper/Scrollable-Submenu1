@@ -1,0 +1,81 @@
+
+
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery.simplyscroll.js"></script>
+<link rel="stylesheet" href="jquery.simplyscroll.css" media="all"
+type="text/css">
+
+<style>
+.vert { display:none;}
+.open .vert { display:block; position:absolute;}
+.open .dropdown-menu { display:block; top:0px;}
+.simply-scroll-btn { z-index:9999;}
+
+</style>
+
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="#">Link</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li><a href="#">Separated link</a></li>
+						<li><a href="#">One more separated link</a></li>
+					 <li><a href="#">Something else here</a></li>
+						<li><a href="#">Separated link</a></li>
+
+						<li><a href="#">One more separated link</a></li>
+					 <li><a href="#">Something else here</a></li>
+
+						<li><a href="#">Separated link</a></li>
+
+						<li><a href="#">One more separated link</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Link2</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li><a href="#">Separated link</a></li>
+						<li><a href="#">One more separated link</a></li>
+					 <li><a href="#">Something else here</a></li>
+						<li><a href="#">Separated link</a></li>
+
+						<li><a href="#">One more separated link</a></li>
+					 <li><a href="#">Something else here</a></li>
+
+						<li><a href="#">Separated link</a></li>
+
+						<li><a href="#">One more separated link</a></li>
+					</ul>
+				</li>
+			</ul>
+</div>
+
+
+<script type="text/javascript">
+
+		$(".dropdown-menu").simplyScroll({
+			customClass: 'vert',
+			orientation: 'vertical',
+            auto: false,
+            manualMode: 'end',
+			frameRate: 40,
+			speed: 5
+		});
+
+		$(".simply-scroll-back").html('<span class="glyphicon glyphicon-triangle-top"></span>');
+
+		$(".simply-scroll-forward").html('<span class="glyphicon glyphicon-triangle-bottom"></span>');
+
+</script>
